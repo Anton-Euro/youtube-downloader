@@ -98,7 +98,7 @@ def download():
     progress_c = progressbar.get()
     yt.streams.get_by_itag(file['audio'][mimetype][-1]).download(output_path='cache', filename=f'part2.{mimetype}')
     
-    subprocess.call(['ffmpeg.exe', '-i', f'cache\part1.{mimetype}', '-i', f'cache\part2.{mimetype}', '-c', 'copy', f'output\{remove_special_characters(file["name"])}.{mimetype}', '-loglevel', 'quiet'], creationflags=0x08000000)
+    subprocess.call(['ffmpeg\\ffmpeg.exe', '-i', f'cache\part1.{mimetype}', '-i', f'cache\part2.{mimetype}', '-c', 'copy', f'output\{remove_special_characters(file["name"])}.{mimetype}', '-loglevel', 'quiet'], creationflags=0x08000000)
     progress_label.configure(text='100 %')
     progressbar.set(1)
     os.remove(f'cache\\part1.{mimetype}')
