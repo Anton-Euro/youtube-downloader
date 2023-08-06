@@ -11,3 +11,8 @@ cd youtube-downloader
 pip install pytube CTkMessagebox customtkinter
 python main.py
 ```
+
+## Usage
+1. Copy the link to the video
+2. Select the video resolution and format
+3. The downloaded video will be located in the ***output*** directory
